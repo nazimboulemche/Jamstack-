@@ -9,7 +9,7 @@ function Contact() {
           )
           .join("&");
       }
-      // eslint-disable-next-line no-unused-vars
+      
       const handleSubmit = (event) => {
         event.preventDefault();
         fetch("/", {
@@ -35,9 +35,9 @@ function Contact() {
         </p>
       </div>
       <div className="TextArea">
-          <form name="contact" method="post"  netlify >
+          <form name="contact" method="post" onSubmit={handleSubmit} netlify >
              <input type="hidden" name="form-name" value="contact"/>
-             <input className="TextInput" type="email" name="email" placeholder="  MAIL"/>
+             <input className="TextInput" type="email" name="message" placeholder="  MAIL"/>
              <button className="Submit" type="submit">SUBMIT</button> 
           </form>
         
