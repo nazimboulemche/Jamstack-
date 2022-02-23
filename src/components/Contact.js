@@ -1,6 +1,15 @@
 import "../App.css";
 
 function Contact() {
+    const encode = (data) => {
+        return Object.keys(data)
+          .map(
+            (key) => {
+              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+            }
+          )
+          .join("&");
+      }
     const handleSubmit = (event) => {
         event.preventDefault();
         fetch("/", {
@@ -15,15 +24,7 @@ function Contact() {
           .catch((error) => alert(error));
       }
 
-    const encode = (data) => {
-        return Object.keys(data)
-          .map(
-            (key) => {
-              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-            }
-          )
-          .join("&");
-      }
+ 
 
   return (
     <div>
