@@ -1,6 +1,30 @@
 import "../App.css";
 
 function Contact() {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": event.target.getAttribute("name"),
+            ...name,
+          }),
+        })
+          .then((data) => console.log(data))
+          .catch((error) => alert(error));
+      }
+
+    const encode = (data) => {
+        return Object.keys(data)
+          .map(
+            (key) => {
+              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+            }
+          )
+          .join("&");
+      }
+
   return (
     <div>
       <div className="TextImgTwo">
@@ -11,8 +35,12 @@ function Contact() {
         </p>
       </div>
       <div className="TextArea">
-        <input className="TextInput" type="textarea" placeholder="  MAIL" />
-        <button className="Submit">SUBMIT</button>
+          <form name="contact" method="post" onSubmit={handleSubmit} data-netlify="true" >
+             <input type="hidden" name="form-name" value="contact"/>
+             <input className="TextInput" type="email" name="email" placeholder="  MAIL"/>
+             <button className="Submit" type="submit">SUBMIT</button> 
+          </form>
+        
       </div>
       <div className="logotwo">
           <img src={require("../img/logo.png")} alt ={"logo"} />
