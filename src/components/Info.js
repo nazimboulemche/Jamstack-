@@ -19,22 +19,22 @@ function Info() {
         </div>
         <div className="ff">
           <div className="cc">
-            <img className="check" src={require("../img/check.png")} />
+            <img className="check" src={require("../img/check.png")} alt={"check"} />
             <p>Hendrerit omittantur mel,es vidit eu lorem animal.</p>
           </div>
           <div className="cc">
-            <img className="check" src={require("../img/check.png")} />
+            <img className="check" src={require("../img/check.png")} alt={"check"}/>
             <p>The best marketing company to boost your web</p>
           </div>
           <div className="cc">
-            <img className="check" src={require("../img/check.png")} />
+            <img className="check" src={require("../img/check.png")} alt={"check"}/>
             <p>The Secrets to Successful About Hexan</p>
           </div>
         </div>
       </div>
     </div>
     <div >
-    <img className="MarkImg" src={marketing} />
+    <img className="MarkImg" src={marketing} alt={"marketing"}/>
   </div>
   </div>
   );

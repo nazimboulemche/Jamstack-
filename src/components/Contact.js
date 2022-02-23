@@ -15,7 +15,7 @@ function Contact() {
         <button className="Submit">SUBMIT</button>
       </div>
       <div className="logotwo">
-          <img src={require("../img/logo.png")} />
+          <img src={require("../img/logo.png")} alt ={"logo"} />
         </div>
         <p className="copyright">© all Rights Reserved by Hexan</p>
     </div>

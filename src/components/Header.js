@@ -5,7 +5,7 @@ function Header() {
     <div>
       <div className="Logo">
         <div className="logo">
-          <img src={require("../img/logo.png")} />
+          <img src={require("../img/logo.png")} alt={"logo" } />
         </div>
       </div>
       <div className="TextImg">
@@ -19,7 +19,7 @@ function Header() {
           <button className="Button">GET STARTED</button>
         </div>
         <div>
-            <img  className="Image" src={require("../img/banner.png")} />
+            <img  className="Image" src={require("../img/banner.png")} alt={ "banner"}/>
         </div>
       </div>
     </div>
