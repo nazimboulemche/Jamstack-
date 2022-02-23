@@ -1,16 +1,16 @@
 import "../App.css";
 
 function Contact() {
-    const encode = (data) => {
+    function encode(data) {
         return Object.keys(data)
           .map(
-            (key) => {
+            (key) =>
               encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-            }
           )
           .join("&");
       }
-    const handleSubmit = (event) => {
+      
+      const handleSubmit = (event) => {
         event.preventDefault();
         fetch("/", {
           method: "POST",
@@ -20,10 +20,9 @@ function Contact() {
             ...name,
           }),
         })
-          .then((data) => console.log(data))
+          .then(() => navigate("/thank-you/"))
           .catch((error) => alert(error));
-      }
-
+      };
  
 
   return (
@@ -38,7 +37,7 @@ function Contact() {
       <div className="TextArea">
           <form name="contact" method="post" onSubmit={handleSubmit} data-netlify="true" >
              <input type="hidden" name="form-name" value="contact"/>
-             <input className="TextInput" type="email" name="email" placeholder="  MAIL"/>
+             <input className="TextInput" type="email" name="message" placeholder="  MAIL"/>
              <button className="Submit" type="submit">SUBMIT</button> 
           </form>
         
