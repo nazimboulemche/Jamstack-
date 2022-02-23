@@ -1,4 +1,5 @@
 import "../App.css";
+import json from "../json/site.json"
 
 function Contact() {
     function encode(data) {
@@ -28,24 +29,23 @@ function Contact() {
   return (
     <div>
       <div className="TextImgTwo">
-        <h1 className="titreone">Contact</h1>
+        <h1 className="titreone">{json.contact.title}</h1>
         <p className="titretwo">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod Lorem ipsum
+        {json.contact.description}
         </p>
       </div>
       <div className="TextArea">
           <form name="contact" method="post" onSubmit={handleSubmit} netlify >
              <input type="hidden" name="form-name" value="contact"/>
              <input className="TextInput" type="email" name="message" placeholder="  MAIL"/>
-             <button className="Submit" type="submit">SUBMIT</button> 
+             <button className="Submit" type="submit">{json.contact.boutton}</button> 
           </form>
         
       </div>
       <div className="logotwo">
           <img src={require("../img/logo.png")} alt ={"logo"} />
         </div>
-        <p className="copyright">© all Rights Reserved by Hexan</p>
+        <p className="copyright">{json.contact.text}</p>
     </div>
   );
 }

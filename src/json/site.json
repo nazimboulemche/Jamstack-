@@ -1,25 +1,4 @@
-backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-
-  # These lines should *not* be indented
-media_folder: "src/json" 
-public_folder: "src/json/site.json" 
-
-collections:
-  - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "contact": {
-    "title": "Contact",
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod Lorem ipsum",
-    "boutton": "SUBMIT",
-    "text": "© all Rights Reserved by Hexan"
-  },}
-      - {label: {
+{
   "contact": {
     "title": "Contact",
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod Lorem ipsum",
@@ -65,5 +44,4 @@ collections:
     "title": "Customer Support",
     "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor"
   }
-}
 }

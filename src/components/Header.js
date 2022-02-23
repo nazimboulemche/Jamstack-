@@ -1,4 +1,5 @@
 import "../App.css";
+import json from "../json/site.json"
 
 function Header() {
   return (
@@ -10,13 +11,11 @@ function Header() {
       </div>
       <div className="TextImg">
         <div className="FullText">
-          <h1 className="TextOne">Make Business with us & become beautiful</h1>
+          <h1 className="TextOne">{json.header.title}</h1>
           <p className="TextTwo">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem <br/>
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an <br/>
-            unknown printer took a galley of type and scrambled it to make a type specimen book.
+          {json.header.description}
           </p>
-          <button className="Button">GET STARTED</button>
+          <button className="Button">{json.header.button}</button>
         </div>
         <div>
             <img  className="Image" src={require("../img/banner.png")} alt={ "banner"}/>

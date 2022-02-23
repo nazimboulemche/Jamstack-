@@ -1,5 +1,6 @@
 import "../App.css";
 import marketing from "../img/marketing-img.svg";
+import json from "../json/site.json"
 
 function Info() {
   return (
@@ -7,28 +8,23 @@ function Info() {
     <div className="AllInfo">
       <div>
         <div>
-          <h1 className="titrethree">Best Digital Marketing Solution</h1>
+          <h1 className="titrethree">{json.info.title}</h1>
           <p className="titretwo">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            <br />
-            nonummy nibh euismod Lorem ipsum Lorem ipsum dolor sit amet, <br />
-            hendrerit mel, es vidit eu lorem animal iracundia. Ius te altaltera
-            essent <br />
-            incorrupte.
+          {json.info.description}
           </p>
         </div>
         <div className="ff">
           <div className="cc">
             <img className="check" src={require("../img/check.png")} alt={"check"} />
-            <p>Hendrerit omittantur mel,es vidit eu lorem animal.</p>
+            <p>{json.info.textone}</p>
           </div>
           <div className="cc">
             <img className="check" src={require("../img/check.png")} alt={"check"}/>
-            <p>The best marketing company to boost your web</p>
+            <p>{json.info.texttwo}</p>
           </div>
           <div className="cc">
             <img className="check" src={require("../img/check.png")} alt={"check"}/>
-            <p>The Secrets to Successful About Hexan</p>
+            <p>{json.info.textthree}</p>
           </div>
         </div>
       </div>
