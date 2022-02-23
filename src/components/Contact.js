@@ -35,9 +35,9 @@ function Contact() {
         </p>
       </div>
       <div className="TextArea">
-          <form name="contact" method="post" onSubmit={handleSubmit} data-netlify="true" >
+          <form name="contact" method="post" netlify >
              <input type="hidden" name="form-name" value="contact"/>
-             <input className="TextInput" type="email" name="message" placeholder="  MAIL"/>
+             <input className="TextInput" type="email" name="email" placeholder="  MAIL"/>
              <button className="Submit" type="submit">SUBMIT</button> 
           </form>
         
