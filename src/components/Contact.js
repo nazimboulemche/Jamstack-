@@ -2,29 +2,7 @@ import "../App.css";
 import json from "../json/site.json"
 
 function Contact() {
-    function encode(data) {
-        return Object.keys(data)
-          .map(
-            (key) =>
-              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-          )
-          .join("&");
-      }
-      
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": event.target.getAttribute("name"),
-            // eslint-disable-next-line no-restricted-globals
-            ...name,
-          }),
-        })
-          .catch((error) => alert(error));
-      };
- 
+    
 
   return (
     <div className="AllContact GlobalSection">
@@ -35,7 +13,7 @@ function Contact() {
         </p>
       </div>
       <div className="TextArea">
-          <form name="contact" method="post" onSubmit={handleSubmit} netlify >
+          <form name="contact" method="post" netlify >
              <input type="hidden" name="form-name" value="contact"/>
              <input className="TextInput" type="email" name="message" placeholder="  MAIL"/>
              <button className="Submit" type="submit">{json.contact.boutton}</button> 
