@@ -4,7 +4,7 @@ import json from "../json/site.json"
 
 function Info() {
   return (
-      <div className="AllInfos">
+      <div className="AllInfos GlobalSection">
     <div className="AllInfo">
       <div>
         <div>

@@ -8,7 +8,7 @@ import json from "../json/site.json"
 
 function Services() {
   return (
-    <div className="TextImgTwo">
+    <div className="TextImgTwo GlobalSection">
       <div>
         <h1 className="titreone">{json.services.title}</h1>
         <p className="titretwo">

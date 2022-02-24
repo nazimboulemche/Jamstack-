@@ -9,7 +9,7 @@ function Header() {
           <img src={require("../img/logo.png")} alt={"logo" } />
         </div>
       </div>
-      <div className="TextImg">
+      <div className="TextImg GlobalSection">
         <div className="FullText">
           <h1 className="TextOne">{json.header.title}</h1>
           <p className="TextTwo">

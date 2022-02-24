@@ -27,7 +27,7 @@ function Contact() {
  
 
   return (
-    <div>
+    <div className="AllContact GlobalSection">
       <div className="TextImgTwo">
         <h1 className="titreone">{json.contact.title}</h1>
         <p className="titretwo">

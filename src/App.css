@@ -1,4 +1,8 @@
-                                                 /* Header */
+.GlobalSection {
+  max-width: 1120px;
+  margin: 0 auto
+}
+/* Header */
 .Logo {
   box-shadow: 0 0 5px 0 lightgray;
   padding: 10px 0 10px 0;
@@ -13,10 +17,10 @@
   display: flex;
   justify-self: center;
   align-content: center;
-  width: 70%;
+  
   margin: 0 auto;
   margin-top: 30px;
-  margin-left: 250px
+  padding: 0 5% 
 }
 
 .TextOne {
@@ -92,8 +96,9 @@
 }
 
 .TextImgTwo {
-  width: 70%;
+  
   margin: 0 auto;
+  padding: 0 5%
 }
 
 .titreone {
@@ -121,7 +126,7 @@
 .AllInfo {
   display : flex;
   width: 70%;
-  margin: 0 auto;
+  margin: 0 0%;
 }
 
 .check {
@@ -142,7 +147,7 @@
     font-weight: 700;
     padding-top:5px;
     margin-top: 50px;
-    width: 25%
+    width: 7%
 }
 
 .MarkImg {
@@ -157,15 +162,12 @@
 .AllInfos{
   display: flex;
   margin-top: 100px;
-  margin-left: 250px
-}
-
-.ff {
-  line-height: 0px;
+  padding: 0 5%
 }
 
                                                     /* Contact */
-.TextArea {
+.TextArea form {
+
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
@@ -175,6 +177,7 @@
 .TextInput {
   border:5px solid #fb4275;
   border-radius:360px;
+  width: 25%
   
 }
 
@@ -202,4 +205,76 @@
   color:#999;
   font-size: 15px;
   font-family: sans-serif;
+}
+.AllContact {
+  padding: 0 5%
+}
+@media screen and (max-width: 800px) {
+  /*Header*/
+  .TextImg {
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .Image {
+    display: none;
+  }
+
+  /*Info */
+  .AllInfos {
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .MarkImg {
+    display: none;
+  }
+  .titrethree{
+    width:50%
+    
+  }
+  
+
+  /*Contact */
+  .TextArea form {
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .TextInput {
+    margin-bottom: 25px;
+    width: 50%
+  }
+}
+@media screen and (max-width: 1200px) {
+  .TextImg {
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  /*Info*/ 
+  .AllInfos {
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .titrethree{
+    width:100%
+    
+  }
+  .AllInfo {
+    display : flex;
+    
+  }
+  /*Services*/ 
+ .All {
+   justify-content: unset;
+   overflow-x: auto;
+   width:100%
+ }
+ .first {
+   width: 300px
+ }
 }
