@@ -18,7 +18,7 @@ function Contact() {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
             "form-name": event.target.getAttribute("name"),
-            // eslint-disable-next-line no-restricted-globals
+            
             ...name,
           }),
         })
